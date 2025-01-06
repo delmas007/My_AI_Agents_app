@@ -23,6 +23,7 @@ public class MyAiAgentService {
         return chatClient.prompt()
                 .system(systemPrompt)
                 .user("Company Name : " + company)
+                .functions("countryIdentityInfo")
                 .call().content();
     }
 
