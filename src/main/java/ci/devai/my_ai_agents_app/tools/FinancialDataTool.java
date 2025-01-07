@@ -11,6 +11,7 @@ import java.util.function.Function;
         - Le chiffre d'affaires des 3 dernières années
         - Le bénéfice des 3 dernières années
         - La valeur de l'action au cours des 7 derniers jours
+        la devise est en FCFA
         """)
 public class FinancialDataTool implements Function<FinancialDataTool.Request, FinancialDataTool.Response> {
     public record Request(String companyName){};
@@ -23,9 +24,9 @@ public class FinancialDataTool implements Function<FinancialDataTool.Request, Fi
     public Response apply(Request request) {
         System.out.println("financialDataTool invocation  company => "+request.companyName);
         return new Response(
-                new double[]{1000000,2000000,3000000},
-                new double[]{10000,20000,30000},
-                new double[]{450,460,480,480, 320,340,250}
+                new double[]{10000000,20000000,30000000},
+                new double[]{500000,600000,700000},
+                new double[]{45000,46000,48000,48000, 32000,34000,25000}
         );
     }
 }
