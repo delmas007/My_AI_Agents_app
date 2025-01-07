@@ -20,6 +20,7 @@ public class CountryIdentityInfo implements Function<CountryIdentityInfo.Request
 
     @Override
     public Response apply(Request request) {
+        System.out.println("======== countryIdentityInfo ==== Company = "+request.companyName());
         return new Response(request.companyName(), "Côte d'Ivoire", "Technologie",2024);
     }
 
